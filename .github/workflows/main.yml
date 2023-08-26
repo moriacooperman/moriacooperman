@@ -1,0 +1,15 @@
+import pyautogui
+import time
+
+def type_message(message, delay=160.1):
+    # Give the user a few seconds to focus on the input field
+    time.sleep(100)
+    
+    # Type out the message
+    pyautogui.write(message, interval=delay)
+
+if __name__ == "__main__":
+    user_message = input("Your account has not been funded, your mining has not began. They system will automatically remove your account but you are free to register again and verify your account as soon you are ready you start mining.
+: ")
+    type_message(user_message)
+    print("Message typing completed.")
